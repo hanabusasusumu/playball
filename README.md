@@ -17,7 +17,7 @@
 | Column         | Type       | Options                        |
 | -------------- | ---------- | ------------------------------ |
 | name           | string     | null: false                    |
-| city           | integer    | null: false                    |
+| city_id        | integer    | null: false                    |
 | message        | text       | null: false                    |
 | representative | integer    | null: false                    |
 | email          | string     | null: false                    |
