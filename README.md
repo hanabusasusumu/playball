@@ -19,7 +19,7 @@
 | name           | string     | null: false                    |
 | city_id        | integer    | null: false                    |
 | message        | text       | null: false                    |
-| representative | integer    | null: false                    |
+| representative | string     | null: false                    |
 | email          | string     | null: false                    |
 | user           | references | null: false, foreign_key: true |
 
