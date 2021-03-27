@@ -12,7 +12,7 @@
   <body>
     <% if user_signed_in? %>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-      <%= link_to "新規投稿", class: :nav__btn %>
+      <%= link_to "新規投稿", new_team_path, class: :nav__btn %>
 
     <% else %>
       <%= link_to "ログイン", new_user_session_path %>
