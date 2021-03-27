@@ -6,6 +6,6 @@ class Team < ApplicationRecord
   validates :city_id, presence: true
   validates :message, presence: true
   validates :representative, presence: true
-  validates :emal, presence: true
+  validates :email, presence: true
   validates :image, presence: true
 end

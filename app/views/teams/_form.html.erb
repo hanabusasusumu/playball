@@ -5,6 +5,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :city_id, "所属の市町村" %><br />
+    <%= f.text_field :city_id %>
+  </div>
+
+  <div class="field">
     <%= f.label :message, "メッセージ" %><br />
     <%= f.text_area :message, class: :form__text %>
   </div>
