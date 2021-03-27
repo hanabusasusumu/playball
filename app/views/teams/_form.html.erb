@@ -1,0 +1,30 @@
+<%= form_with model: @team, local: true do |f|%>
+  <div class="field">
+    <%= f.label :name, "チームの名称" %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :message, "メッセージ" %><br />
+    <%= f.text_area :message, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :representative, "チームの代表者名" %><br />
+    <%= f.text_field :representative %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, "代表者のメールアドレス" %><br />
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "チームの画像" %><br />
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
