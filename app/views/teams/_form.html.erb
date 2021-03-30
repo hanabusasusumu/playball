@@ -6,7 +6,7 @@
 
   <div class="field">
     <%= f.label :city_id, "所属の市町村" %><br />
-    <%= f.text_field :city_id %>
+    <%= f.collection_select(:city_id, City.all, :id, :name, {}, {class:"city-select"}) %>
   </div>
 
   <div class="field">
