@@ -1,0 +1,9 @@
+<div class="card">
+  <%= link_to image_tag(team.image, class: :card__img ), teams_path(team.id) %>
+  <div class="card__body">
+    <p class="card__summary">
+      <%= team.name %>
+      <%= team.city.name %>
+    </p>
+  </div>
+</div>
