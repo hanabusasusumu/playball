@@ -4,10 +4,9 @@
       <p class="prototype__hedding">
         <%= @team.name %>
       </p>
-      <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
       <% if user_signed_in? && current_user.id == @team.user_id %>
         <div class="prototype__manage">
-          <%#= link_to "編集する", edit_team_path(@team.id), class: :prototype__btn %>
+          <%= link_to "編集する", edit_team_path(@team.id), class: :prototype__btn %>
           <%#= link_to "削除する", team_path(@team.id), method: :delete, class: :prototype__btn %>
         </div>
       <% end %>
@@ -17,15 +16,26 @@
       </div>
       <div class="prototype__body">
         <div class="prototype__detail">
-          <p class="detail__title">キャッチコピー</p>
           <p class="detail__message">
-            <%=  %>
+            <%= @team.city.name %>
           </p>
         </div>
         <div class="prototype__detail">
-          <p class="detail__title">コンセプト</p>
+          <p class="detail__title">＜ メッセージ ＞</p>
           <p class="detail__message">
-            <%=  %>
+            <%= @team.message %>
+          </p>
+        </div>
+        <div class="prototype__detail">
+          <p class="detail__title">＜ 代表者 ＞</p>
+          <p class="detail__message">
+            <%= @team.representative %>
+          </p>
+        </div>
+        <div class="prototype__detail">
+          <p class="detail__title">＜ 連絡先 ＞</p>
+          <p class="detail__message">
+            <%= @team.email %>
           </p>
         </div>
       </div>
