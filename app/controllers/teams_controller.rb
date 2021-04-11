@@ -16,6 +16,25 @@ class TeamsController < ApplicationController
     end  
   end
 
+  def show
+    @team = Team.find(params[:id])
+  end
+
+  def edit
+    @team = Team.find(params[:id])
+    unless @team.user_id == current_user.id
+      redirect_to action: :index
+    end
+  end
+
+  def update
+    @team = Team.find(params[:id])
+    if @team.update(team_params)
+      redirect_to team_path(@team.id)
+    else
+      render :edit
+    end
+  end
   private
   
   def team_params
