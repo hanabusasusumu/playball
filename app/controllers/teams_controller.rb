@@ -1,4 +1,6 @@
 class TeamsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
+
   def index
     @teams = Team.all.order('created_at DESC')
   end
@@ -35,6 +37,13 @@ class TeamsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    @team = Team.find(params[:id])
+    @team.destroy
+    redirect_to root_path
+  end
+
   private
   
   def team_params
