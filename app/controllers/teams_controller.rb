@@ -21,7 +21,7 @@ class TeamsController < ApplicationController
   def show
     @team = Team.find(params[:id])
     @comment = Comment.new
-
+    @comments = @team.comments.includes(:user)
   end
 
   def edit

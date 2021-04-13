@@ -5,5 +5,4 @@ Rails.application.routes.draw do
   resources :teams, only: [:new, :create, :show, :edit, :update, :destroy] do
     resources :comments, only: :create
   end
-  resources :user, only: :show
 end

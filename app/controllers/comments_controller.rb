@@ -5,9 +5,9 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to "/teams/#{@comment.team.id}" 
     else   
-      @team = @comment.prototype
+      @team = @comment.team
       @comments = @team.comments
-      render "prototypes/show"
+      render "teams/show"
     end  
   end
 
