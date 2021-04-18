@@ -47,7 +47,9 @@ class TeamsController < ApplicationController
   end
 
   def search
-    @results = @t.results
+    @teams = @t.result
+    city_id = params[:q][:city_id_eq]
+    @results = City.find_by(id: city_id)
   end
 
   private
