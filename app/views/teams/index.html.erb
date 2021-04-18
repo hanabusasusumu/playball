@@ -1,5 +1,10 @@
 <main class="main">
   <div class = inner>
+  <%= search_form_for @t, url: teams_search_path do |f| %>
+    <%= f.label :city_id_eq, '所属の市町村' %>
+    <%= f.collection_select :city_id_eq, City.where.not(id: 1), :id, :name,  include_blank: '指定なし' %>
+    <%= f.submit '検索' %>
+  <% end %>
     <div class="card__wrapper">
       <%= render partial: 'team', collection: @teams %>
     </div>

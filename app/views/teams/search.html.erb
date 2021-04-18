@@ -1,0 +1,19 @@
+<main class="main">
+  <div class = inner>
+  <h2>所属の市町村 <%= @results.name %></h2>
+    <div class="card__wrapper">
+      <% @teams.each do |team| %>
+        <div class="card">
+          <%= link_to image_tag(team.image, class: :card__img ), team_path(team.id) %>
+            <div class="card__body">
+              <p class="card__summary">
+                <%= team.name %>
+                <%= "(#{team.city.name})" %>
+              </p>
+            </div>
+          </div>
+      <% end %>
+      <%= link_to 'トップページへ戻る', root_path %>
+    </div>
+  </div>
+</main>
