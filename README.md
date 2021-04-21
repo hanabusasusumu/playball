@@ -1,42 +1,24 @@
-## users テーブル
+# アプリ名
+草野球チームのメンバー募集サイト Play Ball !
 
-| Column             | Type   | Options                   |
-| ------------------ | ------ | ------------------------- |
-| nickname           | string | null: false               |
-| email              | string | null: false, unique: true |
-| encrypted_password | string | null: false               |
+# 概要
+草野球チームのメンバー募集を案内することができる
+メンバー募集をしているチームを探すことができる
 
+# 本番環境
+https://playball-31947.herokuapp.com/
 
-### Association
+ログイン情報（テスト用）  
+・Eメール：  
+・パスワード：
 
-- has_many :teams
-- has_many :comments
+# 制作背景
+草野球チームを運営している友人から、頻繁に「◯月◯日の試合のメンバーが足りないから、助っ人で参加してくれないか」と連絡が来ている時期があった。聞くところによると、その友人のチームは最近メンバーが減ってしまい困っていることがわかった。そこで、気軽にメンバー募集が案内できるサイトがあれば、その課題を解決できるのではないかと思い作成して見ることにした。
 
-##  teamsテーブル
+# 工夫したポイント
+・所属の市町村がわかるようにした
+・所属している市町村ごとのチームを一括表示させる検索機能を実装した
+・チームの雰囲気がわかるように画像投稿機能を実装した
+・気軽に質問等できるようにコメント機能を実装した
 
-| Column         | Type       | Options                        |
-| -------------- | ---------- | ------------------------------ |
-| name           | string     | null: false                    |
-| city_id        | integer    | null: false                    |
-| message        | text       | null: false                    |
-| representative | string     | null: false                    |
-| email          | string     | null: false                    |
-| user           | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :user
-- has_one :comments
-
-## comments テーブル
-
-| Column   | Type       | Options                        |
-| -------- | ---------- | ------------------------------ |
-| messages | text       | null: false,                   |
-| user     | references | null: false, foreign_key: true |
-| team     | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :user
-- belongs_to :team
+# 
