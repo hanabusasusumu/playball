@@ -26,10 +26,10 @@ https://playball-31947.herokuapp.com/
 [![Image from Gyazo](https://i.gyazo.com/266ad1652f1cde4b67500a7932bb46d7.png)](https://gyazo.com/266ad1652f1cde4b67500a7932bb46d7)
 
 # 工夫したポイント
-・所属の市町村がわかるようにした
-・所属している市町村ごとのチームを一括表示させる検索機能を実装した
-・チームの雰囲気がわかるように画像投稿機能を実装した
-・気軽に質問等できるようにコメント機能を実装した
+・所属の市町村がわかるようにした  
+・所属している市町村ごとのチームを一括表示させる検索機能を実装した  
+・チームの雰囲気がわかるように画像投稿機能を実装した  
+・気軽に質問等できるようにコメント機能を実装した  
 
 # 使用環境
 ## バックエンド
@@ -54,8 +54,8 @@ RSpec
 VSCode
 
 # 今後実装したい機能
-ユーザー情報表示機能で選手としてのプロフィールを表示させる
-所属の市町村の数を増やす
+・ユーザー情報表示機能で選手としてのプロフィールを表示させる  
+・所属の市町村の数を増やす
 
 # DB
 ## users テーブル
@@ -96,3 +96,5 @@ has_many :comments
 
 - belongs_to :user
 - belongs_to :team
+
+[![Image from Gyazo](https://i.gyazo.com/2d2ba87b0c7ecafe810060a2f47ca55c.png)](https://gyazo.com/2d2ba87b0c7ecafe810060a2f47ca55c)
