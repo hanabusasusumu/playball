@@ -66,8 +66,8 @@ VSCode
 | encrypted_password | string | null: false               |
 
 ### Association
-has_many :teams
-has_many :comments
+- has_many :teams
+- has_many :comments
 
 ## teamsテーブル
 | Column         | Type       | Options                        |
