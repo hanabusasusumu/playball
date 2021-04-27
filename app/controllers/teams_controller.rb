@@ -47,7 +47,7 @@ class TeamsController < ApplicationController
   end
 
   def search
-    @teams = @t.result
+    @teams = @t.result.order('created_at DESC')
     city_id = params[:q][:city_id_eq]
     @results = City.find_by(id: city_id)
   end
