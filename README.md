@@ -42,7 +42,7 @@ HTML, CSS
 MySQL, SequelPro
 
 ## インフラ
-heroku
+heroku, AWS
 
 ## ソース管理
 GitHub, GitHubDesktop
